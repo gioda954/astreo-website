@@ -31,17 +31,18 @@ body {
     "Segoe UI", sans-serif;
   color: var(--text);
   background-color: #02050b;
-  background-image: linear-gradient(140deg, rgba(2, 5, 11, 0.92), rgba(2, 5, 11, 0.78)),
+  background-image: linear-gradient(140deg, rgba(2, 5, 11, 0.75), rgba(2, 5, 11, 0.4)),
     url("images/sfondo.jpg");
   background-size: cover, cover;
   background-position: center, center;
   background-attachment: fixed, fixed;
+  background-blend-mode: multiply;
   line-height: 1.6;
   min-height: 100vh;
 }
 
 body.page-album {
-  background-image: linear-gradient(140deg, rgba(2, 5, 11, 0.88), rgba(2, 5, 11, 0.72)),
+  background-image: linear-gradient(140deg, rgba(2, 5, 11, 0.68), rgba(2, 5, 11, 0.38)),
     url("images/sfondo_2.JPG");
 }
 
@@ -219,6 +220,13 @@ img {
   gap: clamp(2rem, 5vw, 4rem);
   padding: clamp(4rem, 10vw, 7rem) clamp(1rem, 4vw, 4rem);
   align-items: center;
+  background: linear-gradient(120deg, rgba(2, 5, 11, 0.88), rgba(2, 5, 11, 0.55)),
+    url("images/sfondo.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: calc(var(--radius) + 10px);
+  border: 1px solid rgba(38, 70, 120, 0.32);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
 }
 
 .hero-media {
@@ -227,18 +235,33 @@ img {
   place-items: center;
   border-radius: var(--radius);
   overflow: hidden;
-  padding: clamp(2.4rem, 6vw, 3.6rem);
-  background: radial-gradient(circle at 50% 10%, rgba(38, 70, 120, 0.45), transparent 70%),
-    var(--surface);
+  padding: clamp(1.6rem, 5vw, 2.6rem);
+  background: radial-gradient(circle at 50% 10%, rgba(38, 70, 120, 0.35), transparent 65%),
+    linear-gradient(160deg, rgba(11, 19, 32, 0.92), rgba(11, 19, 32, 0.5));
   box-shadow: var(--shadow);
 }
 
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 12% 18%;
+  border-radius: 28% 38% 32% 42%;
+  background: radial-gradient(circle, rgba(38, 70, 120, 0.45) 0%, transparent 70%);
+  filter: blur(6px);
+  opacity: 0.7;
+  animation: pulse-glow 9s ease-in-out infinite;
+  z-index: 0;
+}
+
 .hero-bottle {
+  position: relative;
+  z-index: 1;
   width: min(100%, 340px);
   max-height: 480px;
   object-fit: contain;
   border-radius: 0;
-  filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.45));
+  animation: floaty 8s ease-in-out infinite;
 }
 
 .hero-content {
@@ -307,6 +330,33 @@ h3 {
   transform: translateY(-2px);
 }
 
+.btn.glow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(38, 70, 120, 0.35);
+  z-index: 0;
+}
+
+.btn.glow::before {
+  content: "";
+  position: absolute;
+  inset: -120%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(38, 70, 120, 0) 0deg,
+    rgba(38, 70, 120, 0.65) 120deg,
+    rgba(38, 70, 120, 0) 240deg,
+    rgba(38, 70, 120, 0.65) 360deg
+  );
+  animation: sweep 6s linear infinite;
+  z-index: -1;
+}
+
+.btn.glow:hover,
+.btn.glow:focus-visible {
+  box-shadow: 0 0 30px rgba(38, 70, 120, 0.4);
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -339,11 +389,18 @@ h3 {
 }
 
 .section-alt {
-  background: var(--bg-alt);
+  background: linear-gradient(135deg, rgba(2, 5, 11, 0.88), rgba(2, 5, 11, 0.58)),
+    url("images/sfondo_2.JPG");
+  background-size: cover;
+  background-position: center;
+  border-radius: calc(var(--radius) + 8px);
+  border: 1px solid rgba(38, 70, 120, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
 }
 
 .album-hero,
 .album-section,
+.album-preview,
 .album-cta {
   background: rgba(2, 5, 11, 0.78);
   border: 1px solid rgba(38, 70, 120, 0.35);
@@ -357,6 +414,7 @@ h3 {
 
 .album-hero::after,
 .album-section::after,
+.album-preview::after,
 .album-cta::after {
   content: none;
 }
@@ -397,6 +455,23 @@ h3 {
   position: relative;
   overflow: hidden;
   background: linear-gradient(120deg, rgba(2, 5, 11, 0.85), rgba(38, 70, 120, 0.55));
+}
+
+.album-preview {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(11, 19, 32, 0.85), rgba(38, 70, 120, 0.4));
+}
+
+.album-preview-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.album-preview-inner p {
+  color: var(--text-muted);
+  margin: 0;
 }
 
 .album-hero-inner {
@@ -492,6 +567,9 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
 }
 
 .album-grid img {
@@ -499,6 +577,33 @@ h3 {
   height: 100%;
   display: block;
   object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.album-grid figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 5, 11, 0.6) 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.album-grid figure:hover,
+.album-grid figure:focus-within {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(38, 70, 120, 0.6);
+}
+
+.album-grid figure:hover img,
+.album-grid figure:focus-within img {
+  transform: scale(1.05);
+}
+
+.album-grid figure:hover::after,
+.album-grid figure:focus-within::after {
+  opacity: 1;
 }
 
 .media-card {
@@ -509,6 +614,15 @@ h3 {
   border: 1px solid var(--border);
   display: grid;
   gap: 1rem;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.media-card:hover,
+.media-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(38, 70, 120, 0.6);
 }
 
 .media-card figcaption {
@@ -592,6 +706,37 @@ h3 {
 .gallery-item figcaption {
   color: var(--text-muted);
   font-size: 0.85rem;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(0.95) rotate(0deg);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .cta {
