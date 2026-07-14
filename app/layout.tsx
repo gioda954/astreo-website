@@ -4,6 +4,7 @@ import "./app.css";
 export const metadata: Metadata = {
   title: "Astreo",
   description: "Astreo — vino, solidarietà e cultura",
+  icons: { icon: "/favicon.png", apple: "/favicon.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -6,7 +6,7 @@
     <title>Astreo | Album delle vendemmie</title>
     <meta
       name="description"
-      content="Rivivi le vendemmie del progetto Astreo: album fotografici delle edizioni 2019 e 2020 con il team, le vigne e i momenti simbolo."
+      content="Rivivi le vendemmie del progetto Astreo e la consegna del pianoforte: album fotografici con il team e i momenti simbolo."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,15 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+    <link rel="shortcut icon" href="/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="/favicon.png?v=2" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-album">
+  <body class="page-album" data-page="album">
     <header class="site-header">
       <div class="logo-area">
         <img
           src="images/logo.jpg"
-          alt="Astreo, logo ufficiale dell'edizione 2019"
+          alt=""
           class="logo-image"
+          aria-hidden="true"
         />
         <span class="logo-type">
           <span class="logo-name">Astreo</span>
@@ -30,18 +34,24 @@
         </span>
       </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Apri menu</span>
+        <span class="sr-only" data-i18n="common.openMenu">Apri menu</span>
         <span class="nav-toggle-bar"></span>
       </button>
-      <nav id="site-nav" class="site-nav" aria-label="Navigazione principale">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#storia">Storia</a>
-        <a href="index.html#vino">Il vino</a>
-        <a href="index.html#dono">Il dono</a>
-        <a href="index.html#team">Chi siamo</a>
-        <a href="index.html#galleria">Galleria</a>
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Navigazione principale"
+        data-i18n-aria-label="common.mainNavigation"
+      >
+        <a href="/#home">Home</a>
+        <a href="/#storia" data-i18n="nav.story">Storia</a>
+        <a href="/#vino" data-i18n="nav.wine">Il vino</a>
+        <a href="/#dono" data-i18n="nav.gift">Il dono</a>
+        <a href="seconda-edizione.html" data-i18n="nav.secondEdition">Seconda edizione</a>
+        <a href="/#team" data-i18n="nav.about">Chi siamo</a>
+        <a href="/#album-preview" data-i18n="nav.gallery">Galleria</a>
         <a href="album.html" aria-current="page">Album</a>
-        <a href="index.html#contatti">Contatti</a>
+        <a href="/#contatti" data-i18n="nav.contacts">Contatti</a>
         <a
           href="https://www.instagram.com/astreo.wine/"
           target="_blank"
@@ -49,121 +59,146 @@
           class="nav-highlight"
           >Instagram</a
         >
+        <a
+          href="/ordina"
+          class="nav-highlight"
+          data-i18n="common.preorderNow"
+          >Pre-Ordina Ora</a
+        >
       </nav>
+      <button
+        class="language-toggle"
+        type="button"
+        data-language-toggle
+        aria-label="Switch to English"
+        aria-pressed="false"
+      >
+        EN
+      </button>
     </header>
 
     <main>
       <section class="section album-hero">
         <div class="album-hero-inner">
           <p class="overline">Album</p>
-          <h1>Vendemmie Astreo, ricordi per annata</h1>
-          <p class="lead">
+          <h1 data-i18n="album.heroTitle">Vendemmie Astreo, ricordi per annata</h1>
+          <p class="lead" data-i18n="album.heroLead">
             Le immagini raccontano l’impegno collettivo dietro ogni bottiglia:
-            mani che vendemmiano, volti sorridenti, paesaggi che uniscono
-            tradizione e futuro.
+            vendemmie, squadra e la consegna del pianoforte alla scuola.
           </p>
-          <a class="btn primary" href="#edizione2019">Vai alle vendemmie</a>
+          <a class="btn primary" href="#edizione2025" data-i18n="album.goToHarvests">Vai alle vendemmie</a>
         </div>
       </section>
 
-      <section id="edizione2019" class="section album-section">
+      <section id="edizione2025" class="section album-section">
         <div class="section-header">
-          <p class="overline">Edizione 2019</p>
-          <h2>La vendemmia che ha dato vita al pianoforte</h2>
-          <p>
+          <p class="overline" data-i18n="album.edition2025">Edizione 2025</p>
+          <h2 data-i18n="album.harvest2025Title">Una nuova annata per dare continuità al sogno</h2>
+          <p data-i18n="album.harvest2025Text">
+            Nel 2025 la vendemmia prosegue il percorso di solidarietà e la
+            memoria condivisa del progetto.
+          </p>
+        </div>
+        <div class="album-grid">
+          <figure>
+            <img src="images/edizione2025/img_1943.jpeg" alt="Vendemmia 2025 Astreo, condivisione nei filari" data-i18n-alt="album.alt2025SharingRows" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_1950.jpg" alt="Vendemmia 2025 Astreo, panoramica sui vigneti" data-i18n-alt="album.alt2025Vineyards" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_1977.jpeg" alt="Vendemmia 2025 Astreo, raccolta manuale delle uve" data-i18n-alt="album.alt2025ManualHarvest" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_1981.jpeg" alt="Vendemmia 2025 Astreo, ex-allievi con cassette di uva" data-i18n-alt="album.alt2025Crates" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6419.jpeg" alt="Vendemmia 2025 Astreo, dettagli delle uve in cantina" data-i18n-alt="album.alt2025CellarGrapes" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6428.jpeg" alt="Vendemmia 2025 Astreo, squadra in posa in vigna" data-i18n-alt="album.alt2025TeamVineyard" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6437.jpeg" alt="Vendemmia 2025 Astreo, momento di pausa e sorrisi" data-i18n-alt="album.alt2025Break" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6442.jpeg" alt="Vendemmia 2025 Astreo, i filari illuminati dal sole" data-i18n-alt="album.alt2025SunlitRows" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6459.jpeg" alt="Vendemmia 2025 Astreo, pressing delle uve" data-i18n-alt="album.alt2025Pressing" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6462.jpeg" alt="Vendemmia 2025 Astreo, raccolta in squadra" data-i18n-alt="album.alt2025TeamHarvest" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="images/edizione2025/img_6464.jpeg" alt="Vendemmia 2025 Astreo, brindisi di chiusura" data-i18n-alt="album.alt2025FinalToast" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="edizione2024" class="section section-alt album-section">
+        <div class="section-header">
+          <p class="overline" data-i18n="album.edition2024">Edizione 2024</p>
+          <h2 data-i18n="album.harvest2024Title">La vendemmia che ha dato vita al pianoforte</h2>
+          <p data-i18n="album.harvest2024Text">
             I momenti salienti dell’annata che ha finanziato il pianoforte del
-            Morosini: tra grappoli maturi, squadra affiatata e primi brindisi.
+            Morosini: raccolta, lavoro di squadra e primi brindisi.
           </p>
         </div>
         <div class="album-grid">
           <figure>
-            <img src="images/edizione2019/IMG_1459.jpeg" alt="Vendemmia 2019 Astreo, raccolta tra i filari" loading="lazy" />
+            <img src="images/edizione2024/img_1459.jpeg" alt="Vendemmia 2024 Astreo, raccolta tra i filari" data-i18n-alt="album.alt2024HarvestRows" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_1461.jpeg" alt="Vendemmia 2019 Astreo, il team all'opera" loading="lazy" />
+            <img src="images/edizione2024/img_1461.jpeg" alt="Vendemmia 2024 Astreo, il team all'opera" data-i18n-alt="album.alt2024TeamWork" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_1466.jpeg" alt="Vendemmia 2019 Astreo, selezione dei grappoli" loading="lazy" />
+            <img src="images/edizione2024/img_1466.jpeg" alt="Vendemmia 2024 Astreo, selezione dei grappoli" data-i18n-alt="album.alt2024GrapeSelection" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_2870.JPG" alt="Vendemmia 2019 Astreo, panorama sui filari al tramonto" loading="lazy" />
+            <img src="images/edizione2024/img_2870.jpg" alt="Vendemmia 2024 Astreo, panorama sui filari al tramonto" data-i18n-alt="album.alt2024SunsetRows" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_9312.jpeg" alt="Vendemmia 2019 Astreo, dettaglio dei grappoli raccolti" loading="lazy" />
+            <img src="images/edizione2024/img_9312.jpeg" alt="Vendemmia 2024 Astreo, dettaglio dei grappoli raccolti" data-i18n-alt="album.alt2024GrapesDetail" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_9325.jpeg" alt="Vendemmia 2019 Astreo, momento di squadra" loading="lazy" />
+            <img src="images/edizione2024/img_9325.jpeg" alt="Vendemmia 2024 Astreo, momento di squadra" data-i18n-alt="album.alt2024TeamMoment" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2019/IMG_9326.jpeg" alt="Vendemmia 2019 Astreo, brindisi finale tra gli studenti" loading="lazy" />
+            <img src="images/edizione2024/img_9326.jpeg" alt="Vendemmia 2024 Astreo, brindisi finale tra gli ex-allievi" data-i18n-alt="album.alt2024Toast" loading="lazy" />
           </figure>
         </div>
       </section>
 
-      <section id="edizione2020" class="section section-alt album-section">
+      <section class="section album-section">
         <div class="section-header">
-          <p class="overline">Edizione 2020</p>
-          <h2>Una nuova annata per dare continuità al sogno</h2>
-          <p>
-            Nel 2020 la vendemmia prosegue il percorso di solidarietà, ampliando
-            la rete di sostenitori e la memoria condivisa del progetto.
+          <p class="overline" data-i18n="nav.gift">Il dono</p>
+          <h2 data-i18n="home.giftTitle">La consegna del pianoforte</h2>
+          <p data-i18n="album.pianoText">
+            Il risultato concreto del progetto: il pianoforte a coda donato al
+            Morosini.
           </p>
         </div>
         <div class="album-grid">
           <figure>
-            <img src="images/edizione2020/IMG_1943.jpeg" alt="Vendemmia 2020 Astreo, condivisione nei filari" loading="lazy" />
+            <img src="images%202/4d90aa29-d634-4975-95fa-2abf282412e5.jpg" alt="Consegna del pianoforte alla Scuola Navale Militare Morosini" data-i18n-alt="common.pianoDeliveryAlt" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2020/IMG_1950.JPG" alt="Vendemmia 2020 Astreo, panoramica sui vigneti" loading="lazy" />
+            <img src="images%202/8fa2cf3e-1b5f-4398-a088-027b51cd1e4d.jpg" alt="Ex-Allievi del progetto Astreo con il pianoforte donato" data-i18n-alt="common.pianoTeamAlt" loading="lazy" />
           </figure>
           <figure>
-            <img src="images/edizione2020/IMG_1977.jpeg" alt="Vendemmia 2020 Astreo, raccolta manuale delle uve" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_1981.jpeg" alt="Vendemmia 2020 Astreo, studenti con cassette di uva" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6419.jpeg" alt="Vendemmia 2020 Astreo, dettagli delle uve in cantina" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6428.jpeg" alt="Vendemmia 2020 Astreo, squadra in posa in vigna" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6437.jpeg" alt="Vendemmia 2020 Astreo, momento di pausa e sorrisi" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6442.jpeg" alt="Vendemmia 2020 Astreo, i filari illuminati dal sole" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6459.jpeg" alt="Vendemmia 2020 Astreo, pressing delle uve" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6462.jpeg" alt="Vendemmia 2020 Astreo, raccolta in squadra" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="images/edizione2020/IMG_6464.jpeg" alt="Vendemmia 2020 Astreo, brindisi di chiusura" loading="lazy" />
+            <img src="images%202/dc2aacd5-f972-45c2-ab14-19f98f8ce398.jpg" alt="Il pianoforte a coda donato al Morosini" data-i18n-alt="common.pianoAlt" loading="lazy" />
           </figure>
         </div>
       </section>
 
-      <section class="section album-cta">
-        <div class="album-cta-inner">
-          <h2>Vuoi condividere nuove foto?</h2>
-          <p>
-            Invia gli scatti del tuo contributo al progetto Astreo: aggiorneremo
-            l’album con i tuoi ricordi di vendemmia o degli eventi solidali.
-          </p>
-          <a class="btn ghost" href="mailto:info@progettoastreo.it"
-            >Scrivici e partecipa</a
-          >
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <small>
-        © <span id="year"></span> Astreo — Un progetto di solidarietà realizzato
-        dagli studenti. Tutti i diritti riservati.
+        © <span id="year"></span> Astreo — <span data-i18n="common.footer">Un progetto di solidarietà realizzato
+        dagli ex-allievi. Tutti i diritti riservati.
+        </span>
       </small>
     </footer>
 
