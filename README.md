@@ -1,6 +1,8 @@
 # Astreo — ordini e CRM
 
-Applicazione Next.js 15 con sito pubblico preservato, form ordini, ricevuta PDF e CRM protetto da Supabase Auth/RLS.
+Applicazione Next.js 15 con il sito pubblico Astreo v2 preservato, form ordini, ricevuta PDF e CRM protetto da Supabase Auth/RLS.
+
+Il sito pubblico originale vive in `public/` (`index.html`, `seconda-edizione.html`, `album.html`, CSS, JavaScript e immagini). Next.js riscrive solamente `/` verso `public/index.html`; le pagine applicative rimangono route Next.js. In questo modo l’aspetto del sito v2 resta fedele alla sorgente e il form/CRM mantengono il runtime server necessario.
 
 ## Avvio locale
 
@@ -19,7 +21,7 @@ Il sito pubblico è su `/`, il form su `/ordina` e il CRM, volutamente non colle
 - Attivare backup e point-in-time recovery secondo il piano Supabase scelto.
 - Sostituire `public/images/bottiglia.jpg` con la foto definitiva della cassa quando disponibile.
 
-Non usare un deploy statico o la cartella `public`: form, CRM, Server Actions e PDF richiedono il runtime Next.js/OpenNext di Netlify.
+Non pubblicare direttamente la sola cartella `public`: form, CRM, Server Actions e PDF richiedono il runtime Next.js/OpenNext di Netlify. La directory di pubblicazione resta `.next`.
 
 ## Verifica
 

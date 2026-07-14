@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astreo | Un vino, un sogno realizzato</title>
+    <meta
+      name="description"
+      content="Astreo è un progetto solidale nato da un gruppo di ex-allievi: un vino artigianale che ha finanziato la donazione di un pianoforte alla scuola."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+    <link rel="shortcut icon" href="/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="/favicon.png?v=2" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="logo-area">
+        <img
+          src="images/logo.jpg"
+          alt=""
+          class="logo-image"
+          aria-hidden="true"
+        />
+        <span class="logo-type">
+          <span class="logo-name">Astreo</span>
+          <span class="logo-tagline">Ad maiora</span>
+        </span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only" data-i18n="common.openMenu">Apri menu</span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Navigazione principale"
+        data-i18n-aria-label="common.mainNavigation"
+      >
+        <a href="#home">Home</a>
+        <a href="#storia" data-i18n="nav.story">Storia</a>
+        <a href="#vino" data-i18n="nav.wine">Il vino</a>
+        <a href="#dono" data-i18n="nav.gift">Il dono</a>
+        <a href="#seconda-edizione" data-i18n="nav.secondEdition">Seconda edizione</a>
+        <a href="#team" data-i18n="nav.about">Chi siamo</a>
+        <a href="#album-preview">Album</a>
+        <a href="#contatti" data-i18n="nav.contacts">Contatti</a>
+        <a
+          href="https://www.instagram.com/astreo.wine/"
+          target="_blank"
+          rel="noopener"
+          >Instagram</a
+        >
+        <a
+          href="/ordina"
+          class="nav-highlight"
+          data-preorder-link
+          data-i18n="common.preorderNow"
+          >Pre-Ordina Ora</a
+        >
+      </nav>
+      <button
+        class="language-toggle"
+        type="button"
+        data-language-toggle
+        aria-label="Switch to English"
+        aria-pressed="false"
+      >
+        EN
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-media">
+          <img
+            src="images/bottiglia.jpg"
+            alt="Bottiglia di vino Astreo su sfondo nero"
+            data-i18n-alt="home.heroImageAlt"
+            class="hero-bottle"
+          />
+        </div>
+        <div class="hero-content">
+          <p class="overline" data-i18n="home.heroOverline">Edizione 2024</p>
+          <h1 data-i18n="home.heroTitle">Astreo, il nostro sogno.</h1>
+          <p class="lead" data-i18n="home.heroLead">
+            Astreo è il progetto nato dal corso Astraios 19-22 della scuola navale
+            Morosini di Venezia: un vino creato seguendo ogni fase, dalla vendemmia
+            all’etichettatura, per lasciare un impatto positivo sulla nostra scuola, e in futuro, sul mondo.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn primary glow"
+              href="/ordina"
+              data-preorder-link
+              ><span data-i18n="common.preorderAstreoNow">Pre-Ordina Astreo Ora</span></a
+            >
+            <a
+              class="btn ghost"
+              href="seconda-edizione.html"
+              data-i18n="home.discoverSecondEdition"
+              >Scopri la seconda edizione</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="storia" class="section section-alt">
+        <div class="section-header">
+          <p class="overline" data-i18n="nav.story">Storia</p>
+          <h2 data-i18n="home.storyTitle">Un progetto che parla di Fratellanza e Valori</h2>
+        </div>
+        <article class="brochure-copy">
+          <p data-i18n="home.storyText">
+            Nel 2024, circa venti ex-allievi del corso Astraios 19-22 hanno dato
+            vita ad Astreo per lasciare un segno concreto nella scuola che li ha cresciuti. Il
+            ricavato ha permesso la donazione del pianoforte a coda per la sala di musica e il progetto
+            continua come iniziativa di tutti i morosiniani, aperta a idee e
+            contributi per le prossime edizioni.
+          </p>
+        </article>
+      </section>
+
+      <section id="vino" class="section">
+        <div class="section-grid">
+          <div>
+            <p class="overline" data-i18n="nav.wine">Il vino</p>
+            <h2>Astreo</h2>
+            <p>
+            </p>
+            <dl class="details-grid">
+              <div>
+                <dt data-i18n="home.wineTypeLabel">Tipo</dt>
+                <dd data-i18n="home.wineTypeText">Taglio bordolese: 50% Cabernet, 50% Merlot.</dd>
+              </div>
+              <div>
+                <dt data-i18n="home.wineProcessLabel">Filiera</dt>
+                <dd data-i18n="home.wineProcessText">
+                  Seguita dagli ex-allievi in ogni fase, dalla vendemmia
+                  all’etichetta.
+                </dd>
+              </div>
+              <div>
+                <dt data-i18n="home.wineQualityLabel">Qualità</dt>
+                <dd data-i18n="home.wineQualityText">
+                  Masari ci ha affiancato e garantisce la qualità, tra le
+                  migliori cantine d’Italia.
+                </dd>
+              </div>
+              <div>
+                <dt data-i18n="home.wineFirstEditionLabel">La prima edizione (2024) è stata dedicata a </dt>
+                <dd data-i18n="home.wineFirstEditionText">
+                  L’acquisto di un pianoforte a coda per la sala di musica, ora a disposizione di tutti gli allievi.
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="media-card bottle-card">
+            <img
+              src="images/bottiglia.jpg"
+              alt="Bottiglia Astreo con etichetta nera e dettagli dell'elmo"
+              data-i18n-alt="home.bottleAlt"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="dono" class="section section-alt">
+        <div class="section-grid">
+          <div class="photo-grid">
+            <figure>
+              <img
+                src="images%202/4d90aa29-d634-4975-95fa-2abf282412e5.jpg"
+                alt="Consegna del pianoforte alla Scuola Navale Militare Morosini"
+                data-i18n-alt="common.pianoDeliveryAlt"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="images%202/8fa2cf3e-1b5f-4398-a088-027b51cd1e4d.jpg"
+                alt="Ex-Allievi del progetto Astreo con il pianoforte donato"
+                data-i18n-alt="common.pianoTeamAlt"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="images%202/dc2aacd5-f972-45c2-ab14-19f98f8ce398.jpg"
+                alt="Il pianoforte a coda donato al Morosini"
+                data-i18n-alt="common.pianoAlt"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div>
+            <p class="overline" data-i18n="nav.gift">Il dono</p>
+            <h2 data-i18n="home.giftTitle">La consegna del pianoforte</h2>
+            <p data-i18n="home.giftText">
+              Il ricavato dell’edizione 2024 ha permesso la consegna del
+              pianoforte a coda al Morosini, un dono per gli allievi di oggi e
+              di domani.
+            </p>
+            <ul class="values-list">
+              <li data-i18n-html="home.valueSolidarity">
+                <strong>Solidarietà</strong>: ogni bottiglia sostiene un bene
+                comune.
+              </li>
+              <li data-i18n-html="home.valueCulture">
+                <strong>Cultura</strong>: lo strumento invita a suonare e
+                condividere musica.
+              </li>
+              <li data-i18n-html="home.valueMemory">
+                <strong>Memoria</strong>: il lascito del corso Astraios e di tutti coloro che hanno contribuito resta
+                vivo nella scuola.
+              </li>
+              <li data-i18n-html="home.valueContinuity">
+                <strong>Continuità</strong>: il progetto proseguirà con nuove
+                edizioni.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="seconda-edizione" class="section section-alt second-edition-preview">
+        <div class="section-grid">
+          <div>
+            <p class="overline" data-i18n="common.secondEdition2026">Seconda edizione 2026</p>
+            <h2 data-i18n="common.libraryTitle">Una biblioteca per un orfanotrofio di bambine in India</h2>
+            <p class="lead" data-i18n="common.libraryLead">
+              Quest’anno Astreo vuole raccogliere fondi per donare una biblioteca
+              a un orfanotrofio di bambine in poverta assoluta in India.
+            </p>
+            <p class="preview-note" data-i18n="home.secondPreviewText">
+              Il progetto nasce in collaborazione con Anna4Children, che ha
+              costruito e mantiene l’orfanotrofio. Siamo entusiasti di poter
+              contribuire, nel nostro piccolo, a questo grande progetto e siamo
+              profondamente ispirati dalla loro storia.
+            </p>
+            <div class="campaign-progress" data-campaign-progress>
+              <div class="campaign-progress-header">
+                <p class="campaign-progress-kicker" data-i18n="common.bottleGoal">Obiettivo 1000 bottiglie</p>
+                <div class="campaign-progress-totals">
+                  <strong class="campaign-progress-ratio">
+                    <span data-current-bottles>90</span>/<span data-total-bottles>1000</span>
+                  </strong>
+                  <span class="campaign-progress-percent" data-progress-percent>9%</span>
+                </div>
+              </div>
+              <div
+                class="campaign-progress-track"
+                role="progressbar"
+                aria-label="Avanzamento pre-ordini Astreo"
+                data-i18n-aria-label="common.progressAria"
+                aria-valuemin="0"
+                aria-valuemax="1000"
+                aria-valuenow="90"
+              >
+                <span class="campaign-progress-fill" data-progress-fill></span>
+              </div>
+              <p class="campaign-progress-note" data-i18n-html="common.fundraisingGoal">
+                L’obiettivo di quest’anno è raccogliere un netto di
+                <strong data-fundraising-goal>8.500 euro</strong> per completare il progetto.
+              </p>
+            </div>
+            <div class="hero-actions">
+              <a
+                class="btn primary glow"
+                href="/ordina"
+              data-preorder-link
+                ><span data-i18n="common.preorderAstreoNow">Pre-Ordina Astreo Ora</span></a
+              >
+              <a
+                class="btn ghost"
+                href="seconda-edizione.html"
+                data-i18n="home.discoverProject"
+                >Scopri il progetto</a
+              >
+            </div>
+          </div>
+          <div class="photo-grid photo-grid-feature">
+            <figure>
+              <img
+                src="images/dono%20seconda%20edizione%20(2026)/whatsapp%20image%202026-02-25%20at%2023.54.48.jpeg"
+                alt="L'orfanotrofio in India coinvolto nel progetto della seconda edizione Astreo"
+                data-i18n-alt="home.orphanageAlt"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="images/dono%20seconda%20edizione%20(2026)/whatsapp%20image%202026-02-25%20at%2023.55.59.jpeg"
+                alt="Bambine e famiglie vicino all'orfanotrofio sostenuto da Anna4Children"
+                data-i18n-alt="home.childrenFamiliesAlt"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                src="images/dono%20seconda%20edizione%20(2026)/whatsapp%20image%202026-02-25%20at%2023.59.23.jpeg"
+                alt="Momento di vita quotidiana nel progetto sostenuto dalla seconda edizione Astreo"
+                data-i18n-alt="home.dailyLifeAlt"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="section-header">
+          <p class="overline" data-i18n="nav.about">Chi siamo</p>
+          <h2 data-i18n="home.teamTitle">Ex-Allievi, scuola, comunità</h2>
+          <p data-i18n="home.teamIntro">
+            Un progetto corale con ruoli diversi, uniti dallo stesso obiettivo.
+          </p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <h3 data-i18n="home.alumniTitle">gli ex-allievi</h3>
+            <p data-i18n="home.alumniText">
+              Un gruppo di ex-allievi ha seguito ogni fase del progetto.
+            </p>
+            <ul>
+              <li data-i18n="home.alumniPoint1">Vendemmia e lavoro in cantina.</li>
+              <li data-i18n="home.alumniPoint2">Etichetta, comunicazione e vendita.</li>
+            </ul>
+          </article>
+          <article class="team-card">
+            <h3 data-i18n="home.schoolTitle">Scuola</h3>
+            <p data-i18n="home.schoolText">
+              La scuola ha supportato l’iniziativa con spazi e coordinamento.
+            </p>
+            <ul>
+              <li data-i18n="home.schoolPoint1">Supporto organizzativo e istituzionale.</li>
+              <li data-i18n="home.schoolPoint2">Condivisione dei risultati con la comunità.</li>
+            </ul>
+          </article>
+          <article class="team-card">
+            <h3 data-i18n="home.communityTitle">Comunità morosiniana</h3>
+            <p data-i18n="home.communityText">
+              Il progetto è di tutti i morosiniani ed è aperto a idee e
+              contributi.
+            </p>
+            <ul>
+              <li data-i18n="home.communityPoint1">Proposte per migliorare le prossime edizioni.</li>
+              <li data-i18n="home.communityPoint2">Lo Spirito che unisce tutti i Morosiniani.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="album-preview" class="section section-alt album-preview">
+        <div class="album-preview-inner">
+          <p class="overline" data-i18n="home.photoAlbums">Album fotografici</p>
+          <h2 data-i18n="home.harvestsTitle"> Le vendemmie di Astreo</h2>
+          <p data-i18n="home.albumPreviewText">
+            Scopri le immagini delle vendemmie e della consegna del pianoforte:
+            il progetto raccontato attraverso le nostre foto.
+          </p>
+          <a class="btn primary glow" href="album.html" data-i18n="home.goToAlbums">Vai agli album fotografici</a>
+        </div>
+      </section>
+
+      <section id="contatti" class="section cta">
+        <div class="cta-inner">
+          <p class="overline" data-i18n="nav.contacts">Contatti</p>
+          <h2 data-i18n="home.contactsTitle">Segui il progetto o contattaci</h2>
+          <p data-i18n="home.contactsText">
+            Vuoi collaborare o seguire Astreo? Scrivici o seguici sui nostri
+            canali.
+          </p>
+          <div class="cta-actions">
+            <a class="btn primary" href="mailto:gioda2603@gmail.com">
+              <span data-i18n="home.emailCta">scrivi a gioda2603@gmail.com</span>
+            </a>
+            <a
+              class="btn ghost"
+              href="https://www.instagram.com/astreo.wine/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span data-i18n="home.instagramCta">@astreo.wine su Instagram</span>
+            </a>
+          </div>
+          <p class="cta-note" data-i18n-html="home.references">
+            Riferimenti:
+            <a href="https://astraios.it/" target="_blank" rel="noopener">astraios.it</a>
+            e <a href="https://www.instagram.com/astreo.wine/" target="_blank" rel="noopener">@astreo.wine</a>.
+          </p>
+          <p class="cta-note motto">“Ad maiora”.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>
+        © <span id="year"></span> Astreo — <span data-i18n="common.footer">Un progetto di solidarietà realizzato
+        dagli ex-allievi. Tutti i diritti riservati.
+        </span>
+      </small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
