@@ -18,10 +18,10 @@ export function OrderForm({ campaign }: { campaign: Campaign }) {
       <div className="field"><label htmlFor="phone">Numero di telefono *</label><input id="phone" name="phone" required autoComplete="tel" inputMode="tel" placeholder="Es. 333 123 4567"/><small className="muted">Se manca il prefisso useremo automaticamente +39.</small></div>
       <fieldset className="field"><legend className="label">Modalità *</legend><div className="radio-row">
         <label className="radio"><input type="radio" name="fulfillmentType" value="spedizione" checked={fulfillment === "spedizione"} onChange={() => setFulfillment("spedizione")}/> Spedizione</label>
-        <label className="radio"><input type="radio" name="fulfillmentType" value="ritiro" checked={fulfillment === "ritiro"} onChange={() => setFulfillment("ritiro")}/> Ritiro/consegna concordata</label>
+        <label className="radio"><input type="radio" name="fulfillmentType" value="ritiro" checked={fulfillment === "ritiro"} onChange={() => setFulfillment("ritiro")}/> Ritiro a Brogliano</label>
       </div></fieldset>
       {fulfillment === "spedizione" && <div className="field"><label htmlFor="shippingAddress">Indirizzo di spedizione *</label><textarea id="shippingAddress" name="shippingAddress" required placeholder="Via, numero civico, città, CAP"/></div>}
-      {fulfillment !== "spedizione" && <input type="hidden" name="shippingAddress" value=""/>}
+      {fulfillment !== "spedizione" && <><input type="hidden" name="shippingAddress" value=""/><div className="pickup-notice" role="note"><strong>Unico punto di ritiro</strong><p>Via Spesse 5, 36070 Brogliano (VI).</p><label className="check"><input type="checkbox" name="pickupAgreement" required/> <span>Confermo che il ritiro sarà concordato in anticipo con Giovanni Dal Lago. *</span></label></div></>}
       <div className="field"><label htmlFor="casesQuantity">Quante casse vuoi ordinare? *</label><input id="casesQuantity" name="casesQuantity" type="number" min="1" max="100" value={cases} onChange={(e) => setCases(Math.max(1, Number(e.target.value)))} required/><small className="muted">Ogni cassa contiene {campaign.bottles_per_case} bottiglie. Non sono disponibili bottiglie singole.</small></div>
       <div className="field"><label htmlFor="notes">Note</label><textarea id="notes" name="notes" maxLength={1000}/></div>
       <div className="honeypot" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
