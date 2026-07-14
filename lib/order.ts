@@ -9,6 +9,7 @@ export const orderSchema = z
     shippingAddress: z.string().trim().max(300),
     casesQuantity: z.coerce.number().int().min(1).max(100),
     notes: z.string().trim().max(1000).optional().default(""),
+    pickupAgreement: z.string().optional(),
     privacy: z.literal("on", { errorMap: () => ({ message: "Accetta la privacy" }) }),
     website: z.string().max(0).optional().default(""),
   })
@@ -18,6 +19,13 @@ export const orderSchema = z
         code: "custom",
         path: ["shippingAddress"],
         message: "Inserisci via, numero civico, città e CAP",
+      });
+    }
+    if (value.fulfillmentType === "ritiro" && value.pickupAgreement !== "on") {
+      ctx.addIssue({
+        code: "custom",
+        path: ["pickupAgreement"],
+        message: "Conferma il punto di ritiro e l’accordo con Giovanni Dal Lago",
       });
     }
   });
