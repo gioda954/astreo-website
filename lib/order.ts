@@ -37,7 +37,7 @@ export function normalizeItalianPhone(input: string): string {
   if (digits.startsWith("00")) return `+${digits.slice(2)}`;
   if (hasPlus) return `+${digits}`;
   if (digits.startsWith("39") && digits.length >= 11) return `+${digits}`;
-  return `+39${digits.replace(/^0+/, "")}`;
+  return `+39${digits}`;
 }
 
 export function calculateOrder(
