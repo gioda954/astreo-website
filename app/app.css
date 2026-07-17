@@ -184,6 +184,22 @@ tbody tr:hover { background: rgba(244,233,217,.38); }
 .history-picker { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .75rem; margin-bottom: 2rem; padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
 .history-picker label { width: 100%; color: var(--heading); font-weight: 700; }
 .history-picker select { width: min(520px, 100%); }
+.club-stats { margin-bottom: 1.5rem; }
+.club-filters { padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+.club-filters .field { margin-bottom: 0; }
+.club-filters input { width: min(360px, 72vw); }
+.club-table { min-width: 1180px; }
+.club-table td { vertical-align: top; white-space: normal; }
+.club-table td:nth-child(1) { min-width: 220px; }
+.club-table td:nth-child(4) { min-width: 230px; }
+.edition-chip { display: inline-block; margin: 0 .25rem .25rem 0; padding: .2rem .5rem; color: var(--accent-strong); background: var(--accent-soft); border-radius: 999px; font-weight: 700; }
+.club-status-form { display: flex; align-items: center; gap: .35rem; }
+.club-status-form select { min-width: 135px; }
+.club-status-form .button { padding: .48rem .7rem; }
+.club-whatsapp { min-width: 170px; background: #267a4c; border-color: #267a4c; }
+.contact-history { margin-top: .45rem; }
+.contact-history summary { color: var(--accent-strong); cursor: pointer; font-weight: 700; }
+.contact-history div { margin-top: .5rem; padding: .55rem; background: var(--surface-alt); border-radius: 10px; }
 .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 .profile-grid { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(280px,.75fr); gap: 1.2rem; align-items: start; }
 .profile-stats { display: grid; gap: .8rem; }

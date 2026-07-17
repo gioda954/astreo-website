@@ -2,6 +2,15 @@ export type ContactStatus = "da_contattare" | "contattato" | "confermato";
 export type PaymentStatus = "non_pagato" | "parziale" | "pagato";
 export type DeliveryStatus = "da_programmare" | "programmata" | "consegnata";
 export type FulfillmentType = "spedizione" | "ritiro";
+export type ClubStatus = "non_membro" | "membro";
+
+export interface ClubContact {
+  phone: string;
+  email: string | null;
+  status: ClubStatus;
+  last_contacted_at: string | null;
+  updated_by: string | null;
+}
 
 export interface Campaign {
   id: string;
